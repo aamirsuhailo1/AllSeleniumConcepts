@@ -3,6 +3,7 @@ package com.qadevelopers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
@@ -28,12 +29,17 @@ public class BrowsersHandling {
 		driverFF.get("https://www.google.com");
 		driverFF.quit();
 		
+		//Launch Edge
+		System.setProperty("webdriver.edge.driver", "./resources/MicrosoftWebDriver.exe");
+		WebDriver driverE = new  EdgeDriver();
+		driverE.get("https://www.google.com");
+		driverE.quit();
+		
 		//Launch Internet Explorer
 		System.setProperty("webdriver.ie.driver", "./resources/IEDriverServer.exe");
 		WebDriver driverIE = new InternetExplorerDriver();
 		driverIE.get("https://www.google.com");
 		driverIE.quit();
-		
 		
 		
 	}
