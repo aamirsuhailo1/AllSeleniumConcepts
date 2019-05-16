@@ -24,6 +24,7 @@ public class JavascriptAlertsHandling {
 		
 		Alert alert = driverCC.switchTo().alert();
 		Thread.sleep(3000);
+		System.out.println("Text on alert is : "+alert.getText());
 		alert.accept();
 		Thread.sleep(3000);
 		
